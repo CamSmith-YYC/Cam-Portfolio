@@ -1,0 +1,29 @@
+##Working On
+- Adding dragable items to "Tools"
+    - How do I add more and set them within a grid?
+- Spacing & sizing of projects images
+- ContactsBar higlight expand
+- 
+
+##Want to Add
+- Pixel Logo
+- Pick a text style
+- Find proportions of header/section/footer ratio that works
+- Find a title page image
+- Make NavBar buttons depress/animate
+- NavBar collapse to hamburger when page sized down
+- ContactsBar have navigation arrows
+- Hidden Sections
+    - Animations for disappear and reappear
+- Adding a "drop-off" area to Tools Desciption section
+    - Make it snap into place
+    - Add text reveal on snap connection
+
+
+##Done
+- Text in main page
+- Text in about page
+- Page Sections created
+- Found icons and how to link them
+    - How to size them too
+- 

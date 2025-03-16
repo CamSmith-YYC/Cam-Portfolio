@@ -29,6 +29,7 @@ body {
 header {
     margin-left: 1em;
     margin-right: 1em;
+    height: 12dvh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,9 +88,9 @@ button:hover {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
-  }
-  
-  .tooltip .tooltiptext {
+}
+
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     top: 100%;
@@ -100,23 +101,18 @@ button:hover {
     text-align: center;
     border-radius: 6px;
     padding: 5px 0;
-  
+    
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-  }
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
-
-section {
-    min-height: 100vh;
 }
 
-.inline-hScroll {
-    vertical-align: middle;
-    overflow-x: scroll;
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+section {
+    height: 81dvh;
 }
 
 .home-page {
@@ -124,18 +120,30 @@ section {
     background-color: red;
 }
 
+.home-page h1 {
+    background: linear-gradient(-45deg, rgb(7, 163, 181), rgb(1, 247, 1));
+    background-clip: text;
+    color: transparent;
+}
+
 #home-page-image {
     width: 50%;
-    height: 100vh;
-
+    height: 81dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: lightcoral;
 }
+
+#totoro {
+    display: flex;
+}
+
 #home-page-text {
     width: 50%;
-    height: 100vh;
     text-align: right;
     margin: 3%;
-    padding-top: 15%;
+    padding-top: 15dvh;
 }
 
 #home-page-text p {
@@ -148,18 +156,131 @@ section {
 }
 
 .projects-page {
-    display: grid;
     background-color: blue;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-header {
+    align-items: stretch;
+}
+
+.section-header, h2, p {
+    text-align: center;
+}
+
+.project-cards {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5em;
+}
+
+.container {
+    display: flex;
+    width: 15em;
+    height: 25em;
+    perspective: 800px;
+}
+
+.container:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.card {
+    min-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    /* position: relative; */
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+  }
+  
+.front, .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+  
+.front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    object-position: center;
+    overflow: hidden;
+}
+  
+.back {
+    background-color: #3a3a3a;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
 }
 
 .tools-page {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     background-color: yellow;
 }
 
-.contacts-page {
+.tools-body {
+    display: flex;
+}
+
+.tool-container {
     display: grid;
-    background-color: darkorange;
+}
+
+#container {
+    background-color: black;
+    background-image: linear-gradient(#292a30 .1em, transparent .1em ),
+    linear-gradient(90deg, #292a30 .1em, transparent .1em);
+    background-size: 4em 4em;
+    min-width: 75%;
+    height: 70vh;
+    position: relative;
+}
+
+.tool-card {
+    color: darkkhaki;
+    font-size: 95px;
+    line-height: 1;
+}
+
+#card {
+    width: 100px;
+    height: 100px;
+    background-color: forestgreen;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    inset: 50px 50px; /* This default positions card for the moment */
+}
+
+.tool-card > .fa-fw {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tool-description {
+    background-color: grey;
+    min-width: 25%;
+}
+
+.bottom-wedge {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 7dvh;
 }
 
 .footer {
@@ -167,7 +288,80 @@ section {
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 7dvh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: purple;
     color: black;
     text-align: center;
 }
+
+.arrow {
+    padding: 2vw;
+}
+
+.nav-container {
+    position: fixed;
+    bottom: -6dvh;
+    left: 20%;
+    width: 60%;
+    height: 7dvh;
+    z-index: 1000;
+    transition: bottom 0.3s ease;
+}
+
+.nav-container:hover {
+    bottom: 0;
+}
+
+#contacts-nav {
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px 30px 0 0;
+    border-top-style: solid;
+    border-color: #00ff88;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+  
+  .nav-links a {
+    color: darkgrey;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease 0.2s;
+  }
+  
+  .nav-container:hover .nav-links a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #00ff88;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #00ff88;
+  }

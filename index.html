@@ -9,8 +9,8 @@
 </head>
 <body>
     <header>
-        <img id="logo" src="Assets\Icons\chameleon-logo-placeholder.jpg" alt="logo" width="50" height="50">
-        <h1>Cam</h1>
+        <img id="logo" src="Assets\Icons\chameleon-logo-1.png.png" alt="logo" width="100" height="100">
+        <h2>Cam</h2>
         <nav class="navbar">
             <button class="selected-nav-button tooltip"><i class="fa-solid fa-house"></i><span class="tooltiptext">Home</span></button>
             <button class="tooltip"><i class="fa-solid fa-book-open"></i><span class="tooltiptext">About Me</span></button>
@@ -21,56 +21,101 @@
         <div>Menu</div>
     </header>
     <main>
-        <section class="home-page hScroll">
-            <div id="home-page-image">image placeholder</div>
+        <section class="home-page">
+            <div id="home-page-image"><img id="totoro" src="Assets\Icons\TotoroZilla-1.png.png" alt="Totoro Crushing Bridge"></div>
             <div id="home-page-text">
-                <h2>Cam</h2>
-                <h5>Father, Storyteller, Full Stack Developer</h5>
+                <h1>Cam S/M</h1>
+                <h5>Growth, Imagination, Creativity,</h5>
+                <h3>Full Stack Developer</h3>
                 <p>Welcome to my portfolio! I'm a software developer with a passion for creating and learning. I'm currently working on a few projects that I'm excited to share with you. Check out my projects page to see what I've been working on!</p>
             </div>
         </section>
-        <section class="about-page hScroll">
-            <div>
-                <h2>About</h2>
+        <section class="about-page">
+            <div class="section-header">
+                <h2>About Me</h2>
                 <p>My name is Cam Smith and I'm a junior software developer. I've been coding since Sept 2024 have been loving it. I'm always looking for new projects to work on and new technologies to learn. I'm currently working on a few projects that I'm excited to share with you. Check out my projects page to see what I've been working on!</p>
             </div>
-        </section>
-        <section class="projects-page hScroll">
             <div>
-                <h2>Projects</h2>
-                <p>Here are a few of the projects I've been working on recently:</p>
-                <ul>
-                    <li>Project 1</li>
-                    <li>Project 2</li>
-                    <li>Project 3</li>
-                </ul>
-        </section>
-        <section class="tools-page hScroll">
+
+            </div>
             <div>
-                <h2>Tools</h2>
-                <p>Here are a few of the tools I'm comfortable with:</p>
-                <ul>
-                    <li></li> HTML 5 <i class="fa-brands fa-html5"></i></li>
-                    <li></li> CSS <i class="fa-brands fa-css3"></i></li>
-                    <li> JavaScript <i class="fa-brands fa-js"></i></li>
-                </ul>
-        </section>
-        <section class="contacts-page hScroll">
-            <div>
-                <h2>Contacts</h2>
-                <p>Feel free to reach out to me at: 
-                    <ul>
-                        <li><i class="fa-solid fa-envelope"></i></i></li>
-                        <li><i class="fa-brands fa-linkedin"></i></li>
-                        <li><i class="fa-brands fa-square-bluesky"></i></i></li>
-                        <li><i class="fa-brands fa-square-instagram"></i></li>
-                    </ul>
-                </p>
+
             </div>
         </section>
+        <section class="projects-page">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <p>Here are a few of the projects I've been working on recently:</p>
+            </div>
+            <div class="project-cards">
+                <div class="container">
+                    <div class="card">
+                        <div class="front"><img src="Assets\Ocean 1.jpg">Project 1</div>
+                        <div class="back">
+                            <h3>Project 1 Name</h3>
+                            <p>Description of Project 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card">
+                        <div class="front"><img src="Assets\Forest 1.jpg">Project 2</div>
+                        <div class="back">
+                            <h3>Project 2 Name</h3>
+                            <p>Description of Project 2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card">
+                        <div class="front"><img src="Assets\Desert 1.jpg">Project 3</div>
+                        <div class="back">
+                            <h3>Project 3 Name</h3>
+                            <p>Description of Project 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="tools-page">
+            <div class="section-header">
+                <h2>Tools</h2>
+                <p>Here are a few of the tools I'm comfortable with:</p>
+            </div>
+            <div class="tools-body">
+                <div id="container" class="tool-container">
+                    <div id="card" class="tool-card">
+                        <i class="fa-brands fa-html5 fa-fw"></i>
+                    </div>
+                    <!-- <div id="card2" class="tool-card">
+                        <i class="fa-brands fa-css3 fa-fw"></i>
+                    </div> -->
+                    <!-- <div id="card3" class="tool-card">
+                        <i class="fa-brands fa-js fa-fw"></i>
+                    </div> -->
+                </div>
+                <div class="tool-description">
+    
+                </div>
+            </div>
+        </section>
+        <div class="nav-container">
+            <nav id="contacts-nav">
+                <ul class="nav-links">
+                    <li><a href="#"><i class="fa-solid fa-envelope fa-2xl"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin fa-2xl"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-bluesky fa-2xl"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-square-instagram fa-2xl"></i></a></li>
+                </ul>
+            </nav>
+        </div>            
+        <div class="bottom-wedge"></div>
         <div class="footer">
-            <p>This is where I'll put the NavBar for section-nav & contacts</p>
+            <i class="arrow fa-solid fa-circle-arrow-left fa-xl"></i>
+            <p>Feel free to follow me on my socials or contact me via the links bellow</p>
+            <i class="arrow fa-solid fa-circle-arrow-right fa-xl"></i>
         </div>
     </main>
 </body>
+<script src="main.js"></script>
 </html>
